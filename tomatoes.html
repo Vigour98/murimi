@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MURIMI MUKURU - Tomatoes Growing Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/maize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="images/murimi.png" alt="Murimi Mukuru Logo" class="nav-logo-img">
+            <span class="nav-logo-text">Murimi Mukuru</span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+            <a href="#" class="nav-link profile-link">
+                <i class="fas fa-user-circle"></i>
+                Profile
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="crop-header animate__animated animate__fadeIn">
+            <div class="crop-title">
+                <h1>Tomatoes Growing Guide</h1>
+                <button id="budgetBtn" class="budget-btn">
+                    <i class="fas fa-calculator"></i>
+                    Budget
+                </button>
+            </div>
+            <div class="crop-image-container">
+                <img src="images/tomatoes.jpg" alt="Tomatoes" class="crop-main-image" width="70px" height="70px">
+            </div>
+        </section>
+
+        <section class="growing-steps animate__animated animate__fadeInUp">
+            <h2>Steps to Grow Tomatoes</h2>
+            
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Soil Test</h3>
+                <p>Conduct comprehensive soil analysis before planting.</p>
+                <ul>
+                    <li>Ideal pH range: 6.0 to 6.8</li>
+                    <li>Test for essential nutrients (N, P, K)</li>
+                    <li>Check organic matter content</li>
+                    <li>Analyze soil structure and drainage</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Soil Preparation</h3>
+                <p>Prepare soil to create optimal growing conditions.</p>
+                <ul>
+                    <li>Deep plowing to 30cm depth</li>
+                    <li>Add organic matter and compost</li>
+                    <li>Create raised beds if needed</li>
+                    <li>Ensure proper drainage system</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Nursing</h3>
+                <p>Start seeds in a protected environment.</p>
+                <ul>
+                    <li>Use sterile growing medium</li>
+                    <li>Maintain temperature at 20-25°C</li>
+                    <li>Provide adequate lighting</li>
+                    <li>Water carefully to prevent damping off</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h3>Transplanting</h3>
+                <p>Move seedlings to the main field at the right time.</p>
+                <ul>
+                    <li>Transplant after 3-4 weeks</li>
+                    <li>Space plants 45-60cm apart</li>
+                    <li>Water immediately after transplanting</li>
+                    <li>Transplant in the evening or on cloudy days</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <h3>Spraying and Fertilizing</h3>
+                <p>Maintain plant health through proper nutrition and pest control.</p>
+                <ul>
+                    <li>Regular foliar feeding</li>
+                    <li>Disease prevention spraying</li>
+                    <li>NPK application schedule</li>
+                    <li>Integrated pest management</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">6</div>
+                <h3>Trellising</h3>
+                <p>Support plant growth with proper structural support.</p>
+                <ul>
+                    <li>Install strong support systems</li>
+                    <li>Regular pruning and training</li>
+                    <li>Tie plants to supports</li>
+                    <li>Remove suckers weekly</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Budget Calculator Modal -->
+        <div id="budgetModal" class="modal">
+            <div class="modal-content animate__animated animate__fadeInDown">
+                <span class="close">&times;</span>
+                <h2>A GROSS MARGIN BUDGET FOR TOMATO</h2>
+                <form id="budgetForm">
+                    <div class="budget-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="5">GROSS MARGIN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="yield-row">
+                                    <td>Yield levels</td>
+                                    <td>kg</td>
+                                    <td>30,000</td>
+                                    <td>40,000</td>
+                                    <td>50,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Selling price</td>
+                                    <td>per kg</td>
+                                    <td colspan="3">0.50</td>
+                                </tr>
+                                <tr>
+                                    <td>Gross Income</td>
+                                    <td>$/ha</td>
+                                    <td>$ 15,000</td>
+                                    <td>$ 20,000</td>
+                                    <td>$ 25,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Variable Costs</td>
+                                    <td>$/ha</td>
+                                    <td>$ 2,528</td>
+                                    <td>$ 2,824</td>
+                                    <td>$ 3,120</td>
+                                </tr>
+                                <tr>
+                                    <td>Gross Margin</td>
+                                    <td>$/ha</td>
+                                    <td>$ 12,472</td>
+                                    <td>$ 17,176</td>
+                                    <td>$ 21,880</td>
+                                </tr>
+                                <tr>
+                                    <td>Gross Margin</td>
+                                    <td>$/$100TVC</td>
+                                    <td>$ 493</td>
+                                    <td>$ 608</td>
+                                    <td>$ 701</td>
+                                </tr>
+                                <tr class="yield-row">
+                                    <td>Yield Levels</td>
+                                    <td>kg/ha</td>
+                                    <td>30,000</td>
+                                    <td>40,000</td>
+                                    <td>50,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Variable Costs Table -->
+                        <table class="variable-costs">
+                            <thead>
+                                <tr>
+                                    <th colspan="4">VARIABLE COSTS ITEMS</th>
+                                    <th>$/HA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="4">Prior to harvesting</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>a. Labour,</td>
+                                    <td>184</td>
+                                    <td>ld/ha</td>
+                                    <td>$</td>
+                                    <td>294</td>
+                                </tr>
+                                <tr>
+                                    <td>b. Seed,</td>
+                                    <td>150</td>
+                                    <td>g/ha</td>
+                                    <td>$</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>c. Tractor & equipment, 78</td>
+                                    <td>78</td>
+                                    <td>litres</td>
+                                    <td>$</td>
+                                    <td>273</td>
+                                </tr>
+                                <tr>
+                                    <td>d. Fertilizer and lime (ex-factory)</td>
+                                    <td colspan="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>Compound S,</td>
+                                    <td>1000</td>
+                                    <td>kg/ha</td>
+                                    <td>$</td>
+                                    <td>600</td>
+                                </tr>
+                                <tr>
+                                    <td>Ammonium Nitrate,</td>
+                                    <td>200</td>
+                                    <td>kg/ha</td>
+                                    <td>$</td>
+                                    <td>120</td>
+                                </tr>
+                                <tr>
+                                    <td>Agric. Lime</td>
+                                    <td>300</td>
+                                    <td>kg/ha</td>
+                                    <td>$</td>
+                                    <td>150</td>
+                                </tr>
+                                <tr>
+                                    <td>Transport to farm</td>
+                                    <td>1500</td>
+                                    <td>kg</td>
+                                    <td>$</td>
+                                    <td>38</td>
+                                </tr>
+                                <tr>
+                                    <td>e. Pest and disease control</td>
+                                    <td colspan="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>Mancozeb,</td>
+                                    <td>1</td>
+                                    <td>kg/ha</td>
+                                    <td>$</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>Dimethoate 40EC</td>
+                                    <td>3</td>
+                                    <td>litres/ha</td>
+                                    <td>$</td>
+                                    <td>21</td>
+                                </tr>
+                                <tr>
+                                    <td>Wettable Sulphur,</td>
+                                    <td>3</td>
+                                    <td>kg/ha</td>
+                                    <td>$</td>
+                                    <td>24</td>
+                                </tr>
+                                <tr>
+                                    <td>Hustathion,</td>
+                                    <td>2</td>
+                                    <td>lits/ha</td>
+                                    <td>$</td>
+                                    <td>17</td>
+                                </tr>
+                                <tr>
+                                    <td>f. Irrigation,</td>
+                                    <td>6000</td>
+                                    <td>cubic metre</td>
+                                    <td>$</td>
+                                    <td>60</td>
+                                </tr>
+                                <tr>
+                                    <td>g. Trellising wire,</td>
+                                    <td>420</td>
+                                    <td>kg/ha</td>
+                                    <td>$</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>h. String,</td>
+                                    <td>1</td>
+                                    <td>kg/ha</td>
+                                    <td>$</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr class="subtotal-row">
+                                    <td>SUBTOTAL</td>
+                                    <td colspan="3"></td>
+                                    <td>$ 1,608</td>
+                                </tr>
+                                <tr>
+                                    <td>Miscellaneous costs, 2%</td>
+                                    <td colspan="3"></td>
+                                    <td>$ 32</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td>TVC PRIOR TO HARVESTING</td>
+                                    <td colspan="3"></td>
+                                    <td>$ 1,640</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Harvesting and Marketing Table -->
+                        <table class="harvesting-costs">
+                            <tbody>
+                                <tr>
+                                    <td colspan="4">Harvesting and marketing</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>a. Labour,</td>
+                                    <td>2</td>
+                                    <td>days/ton</td>
+                                    <td>$</td>
+                                    <td>86</td>
+                                </tr>
+                                <tr>
+                                    <td>b. Tractor,</td>
+                                    <td>0.25</td>
+                                    <td>litres/ton</td>
+                                    <td>$</td>
+                                    <td>26</td>
+                                </tr>
+                                <tr>
+                                    <td>c. Transport</td>
+                                    <td colspan="3"></td>
+                                    <td>$ 750</td>
+                                </tr>
+                                <tr>
+                                    <td>d. Packing boxes, 15kg</td>
+                                    <td>15</td>
+                                    <td>kg</td>
+                                    <td>$</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr class="subtotal-row">
+                                    <td>SUBTOTAL</td>
+                                    <td colspan="3"></td>
+                                    <td>$ 871</td>
+                                </tr>
+                                <tr>
+                                    <td>Miscellaneous, 2%</td>
+                                    <td colspan="3"></td>
+                                    <td>$ 17</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td>TOTAL HARV. & MARKETING</td>
+                                    <td colspan="3"></td>
+                                    <td>$ 888</td>
+                                </tr>
+                                <tr class="final-total-row">
+                                    <td>TOTAL VARIABLE COSTS</td>
+                                    <td colspan="3"></td>
+                                    <td>$ 2,528</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="images/logo.png" alt="Marondera University Logo" class="university-logo">
+            <p>&copy; 2024 Marondera University. All rights reserved.</p>
+        </div>
+    </footer>
+
+       <!-- Chat Feature -->
+       <button class="chat-button" id="chatButton">
+        <i class="fas fa-comments fa-lg"></i>
+    </button>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Chat Support</span>
+            <i class="fas fa-times" id="chatClose" style="cursor: pointer;"></i>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your message...">
+            <button class="chat-send-btn" id="chatSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/maize.js"></script>
+</body>
+</html>
+
+
+

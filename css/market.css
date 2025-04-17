@@ -1,0 +1,239 @@
+.market-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                url('../images/marketplace.jpg') center/cover;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.market-header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.market-header p {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.post-listing-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.post-listing-btn:hover {
+    background-color: #219a52;
+}
+
+.market-filters {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.filter-group, .search-group {
+    flex: 1;
+    min-width: 0; /* Prevents flex items from overflowing */
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.filter-group select, .search-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 40px; /* Ensure consistent height */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.search-group {
+    position: relative;
+}
+
+.search-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+}
+
+.market-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.listing-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.listing-card:hover {
+    transform: translateY(-5px);
+}
+
+.listing-image {
+    position: relative;
+    height: 200px;
+}
+
+.listing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+    font-size: 0.9em;
+}
+
+.status.available {
+    background-color: #27ae60;
+}
+
+.status.sold {
+    background-color: #e74c3c;
+}
+
+.listing-details {
+    padding: 20px;
+}
+
+.listing-details h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.listing-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.location {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+.price {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.make-offer-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.make-offer-btn:hover:not([disabled]) {
+    background-color: #2980b9;
+}
+
+.make-offer-btn[disabled] {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-offer-btn,
+.submit-listing-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-offer-btn:hover,
+.submit-listing-btn:hover {
+    background-color: #219a52;
+}

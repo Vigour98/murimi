@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MURIMI MUKURU - Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="container">       
+        <div class="form-container animate__animated animate__fadeInUp">
+            <form id="signupForm" class="signup-form">
+                <div class="logo-container animate__animated animate__fadeInDown">
+                    <img src="images/murimi.png" alt="Murimi Mukuru Logo" class="app-logo">
+                </div>
+                <h2>Create Account</h2>
+                <div class="form-group">
+                    <input type="text" id="firstname" required placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="lastname" required placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <select id="province" required>
+                        <option value="">Select Province</option>
+                        <option value="Harare">Harare</option>
+                        <option value="Bulawayo">Bulawayo</option>
+                        <option value="Manicaland">Manicaland</option>
+                        <option value="Mashonaland Central">Mashonaland Central</option>
+                        <option value="Mashonaland East">Mashonaland East</option>
+                        <option value="Mashonaland West">Mashonaland West</option>
+                        <option value="Masvingo">Masvingo</option>
+                        <option value="Matabeleland North">Matabeleland North</option>
+                        <option value="Matabeleland South">Matabeleland South</option>
+                        <option value="Midlands">Midlands</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" required placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" required placeholder="Confirm Password">
+                </div>
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </button>
+                <p class="form-link">Already have an account? <a href="index.html">Login</a></p>
+            </form>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <img src="images/logo.png" alt="Marondera University Logo" class="university-logo">
+                <p>&copy; 2024 Marondera University. All rights reserved.</p>
+            </div>
+        </footer>
+
+           <!-- Chat Feature -->
+    <button class="chat-button" id="chatButton">
+        <i class="fas fa-comments fa-lg"></i>
+    </button>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Chat Support</span>
+            <i class="fas fa-times" id="chatClose" style="cursor: pointer;"></i>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your message...">
+            <button class="chat-send-btn" id="chatSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
