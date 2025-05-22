@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MURIMI MUKURU - Soil Test Interpretation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/soil_test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="images/murimi.png" alt="Murimi Mukuru Logo" class="nav-logo-img">
+            <span class="nav-logo-text">Murimi Mukuru</span>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+            <a href="#" class="nav-link profile-link">
+                <i class="fas fa-user-circle"></i>
+                Profile
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="soil-test-header animate__animated animate__fadeIn">
+            <h1>Soil Test Interpretation</h1>
+            <p>Enter your soil test results for detailed analysis and recommendations</p>
+        </section>
+
+        <section class="soil-test-form-container animate__animated animate__fadeInUp">
+            <form id="soilTestForm" class="soil-test-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="soilPh">
+                            <i class="fas fa-vial"></i>
+                            Soil pH
+                        </label>
+                        <input type="number" id="soilPh" step="0.1" required min="0" max="14">
+                        <span class="unit">pH scale</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nitrogen">
+                            <i class="fas fa-leaf"></i>
+                            Available Nitrogen
+                        </label>
+                        <input type="number" id="nitrogen" step="0.01" required>
+                        <span class="unit">mg/kg</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phosphorus">
+                            <i class="fas fa-atom"></i>
+                            Phosphorus
+                        </label>
+                        <input type="number" id="phosphorus" step="0.01" required>
+                        <span class="unit">mg/kg</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="potassium">
+                            <i class="fas fa-flask"></i>
+                            Potassium
+                        </label>
+                        <input type="number" id="potassium" step="0.01" required>
+                        <span class="unit">mg/kg</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sodium">
+                            <i class="fas fa-microscope"></i>
+                            Sodium
+                        </label>
+                        <input type="number" id="sodium" step="0.01" required>
+                        <span class="unit">mg/kg</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calcium">
+                            <i class="fas fa-cube"></i>
+                            Calcium
+                        </label>
+                        <input type="number" id="calcium" step="0.01" required>
+                        <span class="unit">mg/kg</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="magnesium">
+                            <i class="fas fa-cubes"></i>
+                            Magnesium
+                        </label>
+                        <input type="number" id="magnesium" step="0.01" required>
+                        <span class="unit">mg/kg</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bulkDensity">
+                            <i class="fas fa-weight"></i>
+                            Bulk Density
+                        </label>
+                        <input type="number" id="bulkDensity" step="0.01" required>
+                        <span class="unit">g/cm³</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="soilTexture">
+                            <i class="fas fa-layer-group"></i>
+                            Soil Texture
+                        </label>
+                        <select id="soilTexture" required>
+                            <option value="">Select texture...</option>
+                            <option value="sandy">Sandy</option>
+                            <option value="loamy">Loamy</option>
+                            <option value="clay">Clay</option>
+                            <option value="silt">Silty</option>
+                            <option value="sandy-loam">Sandy Loam</option>
+                            <option value="clay-loam">Clay Loam</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="electricalConductivity">
+                            <i class="fas fa-bolt"></i>
+                            Electrical Conductivity
+                        </label>
+                        <input type="number" id="electricalConductivity" step="0.01" required>
+                        <span class="unit">dS/m</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="organicMatter">
+                            <i class="fas fa-seedling"></i>
+                            Organic Matter
+                        </label>
+                        <input type="number" id="organicMatter" step="0.01" required>
+                        <span class="unit">%</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-chart-bar"></i>
+                    Analyze Results
+                </button>
+            </form>
+        </section>
+
+        <!-- Results Modal -->
+        <div id="resultsModal" class="modal">
+            <div class="modal-content animate__animated animate__fadeInDown">
+                <span class="close">&times;</span>
+                <h2>Soil Analysis Results</h2>
+                <div class="results-container">
+                    <div class="results-summary">
+                        <h3>Summary of Findings</h3>
+                        <div id="resultsSummary"></div>
+                    </div>
+                    
+                    <div class="recommendations">
+                        <h3>Recommendations</h3>
+                        <div id="soilRecommendations"></div>
+                    </div>
+
+                    <div class="optimal-crops">
+                        <h3>Suitable Crops</h3>
+                        <div id="suitableCrops"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer animate__animated animate__fadeIn animate__faster animate__delay-1s">
+        <div class="footer-content">
+            <img src="images/logo.png" alt="Marondera University Logo" class="university-logo">
+            <p>&copy; 2024 Marondera University. All rights reserved.</p>
+        </div>
+    </footer>
+
+       <!-- Chat Feature -->
+       <button class="chat-button" id="chatButton">
+        <i class="fas fa-comments fa-lg"></i>
+    </button>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Chat Support</span>
+            <i class="fas fa-times" id="chatClose" style="cursor: pointer;"></i>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your message...">
+            <button class="chat-send-btn" id="chatSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/soil_test.js"></script>
+</body>
+</html>

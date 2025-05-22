@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MURIMI MUKURU - Animals</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/crops.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="images/murimi.png" alt="Murimi Mukuru Logo" class="nav-logo-img">
+            <span class="nav-logo-text">Murimi Mukuru</span>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+            <a href="#" class="nav-link profile-link">
+                <i class="fas fa-user-circle"></i>
+                Profile
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="crops-section animate__animated animate__fadeIn animate__faster">
+            <h1 class="page-title animate__animated animate__slideInDown animate__faster">Animals</h1>
+            <div class="search-container animate__animated animate__fadeInUp animate__faster">
+                <input type="text" id="searchInput" placeholder="Search crops...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+
+            <div class="crops-table-container animate__animated animate__fadeInUp animate__faster">
+                <table id="cropsTable" class="crops-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Animal Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row animate__animated animate__fadeInUp animate__faster">
+                            <td><img src="images/goat.jpg" alt="Maize" class="crop-image"></td>
+                            <td>Goats</td>
+                            <td>
+                                <button class="view-details-btn" onclick="window.location.href='goats.html'">
+                                    <i class="fas fa-info-circle"></i>
+                                    View Details
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="table-row animate__animated animate__fadeInUp animate__faster animate__delay-1s">
+                            <td><img src="images/cow.jpg" alt="Groundnuts" class="crop-image"></td>
+                            <td>Cows</td>
+                            <td>
+                                <button class="view-details-btn" onclick="viewCropDetails('groundnuts')">
+                                    <i class="fas fa-info-circle"></i>
+                                    View Details
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="table-row animate__animated animate__fadeInUp animate__faster animate__delay-1s">
+                            <td><img src="images/broiler.jpg" alt="Coconut" class="crop-image"></td>
+                            <td>Broilers</td>
+                            <td>
+                                <button class="view-details-btn" onclick="viewCropDetails('coconut')">
+                                    <i class="fas fa-info-circle"></i>
+                                    View Details
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="table-row animate__animated animate__fadeInUp animate__faster animate__delay-1s">
+                            <td><img src="images/pig.webp" alt="Soya Beans" class="crop-image"></td>
+                            <td>Pigs</td>
+                            <td>
+                                <button class="view-details-btn" onclick="viewCropDetails('soyabeans')">
+                                    <i class="fas fa-info-circle"></i>
+                                    View Details
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer animate__animated animate__fadeIn animate__faster animate__delay-1s">
+        <div class="footer-content">
+            <img src="images/logo.png" alt="Marondera University Logo" class="university-logo">
+            <p>&copy; 2024 Marondera University. All rights reserved.</p>
+        </div>
+    </footer>
+       <!-- Chat Feature -->
+       <button class="chat-button" id="chatButton">
+        <i class="fas fa-comments fa-lg"></i>
+    </button>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Chat Support</span>
+            <i class="fas fa-times" id="chatClose" style="cursor: pointer;"></i>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your message...">
+            <button class="chat-send-btn" id="chatSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/crops.js"></script>
+</body>
+</html>
+
+
+

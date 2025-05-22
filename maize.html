@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MURIMI MUKURU - Maize Growing Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/maize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="images/murimi.png" alt="Murimi Mukuru Logo" class="nav-logo-img">
+            <span class="nav-logo-text">Murimi Mukuru</span>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+            <a href="#" class="nav-link profile-link">
+                <i class="fas fa-user-circle"></i>
+                Profile
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="crop-header animate__animated animate__fadeIn">
+            <div class="crop-title">
+                <h1>Maize Growing Guide</h1>
+                <button id="budgetBtn" class="budget-btn">
+                    <i class="fas fa-calculator"></i>
+                    Calculate Budget
+                </button>
+            </div>
+            <div class="crop-image-container">
+                <img src="images/maize.jpg" alt="Maize" class="crop-main-image" width="70px" height="70px">
+            </div>
+        </section>
+
+        <section class="growing-steps animate__animated animate__fadeInUp">
+            <h2>Steps to Grow Maize</h2>
+            
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Land Preparation</h3>
+                <p>Clear the land and plow to a depth of 20-30cm. Ensure proper drainage and remove weeds.</p>
+                <ul>
+                    <li>Soil pH should be between 5.5 and 7.0</li>
+                    <li>Add organic matter if needed</li>
+                    <li>Level the field properly</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Planting</h3>
+                <p>Plant seeds at the right time and spacing.</p>
+                <ul>
+                    <li>Spacing: 75cm between rows, 25cm between plants</li>
+                    <li>Depth: 5-7cm</li>
+                    <li>Season: Start of rainy season</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Fertilizer Application</h3>
+                <p>Apply fertilizers according to soil test results.</p>
+                <ul>
+                    <li>Basal fertilizer: Compound D (NPK)</li>
+                    <li>Top dressing: Ammonium Nitrate</li>
+                    <li>Timing: At planting and 4-6 weeks after emergence</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h3>Pest and Disease Management</h3>
+                <p>Monitor and control pests and diseases regularly.</p>
+                <ul>
+                    <li>Common pests: Stalk borer, armyworm</li>
+                    <li>Diseases: Grey leaf spot, rust</li>
+                    <li>Use appropriate pesticides when needed</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <h3>Harvesting</h3>
+                <p>Harvest when the crop is fully mature.</p>
+                <ul>
+                    <li>Check grain moisture content (should be below 15%)</li>
+                    <li>Look for black layer formation</li>
+                    <li>Store in clean, dry conditions</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Budget Calculator Modal -->
+        <div id="budgetModal" class="modal">
+            <div class="modal-content animate__animated animate__fadeInDown">
+                <span class="close">&times;</span>
+                <h2>Maize Budget Calculator</h2>
+                <form id="budgetForm">
+                    <div class="form-group">
+                        <label for="landSize">Land Size (hectares):</label>
+                        <input type="number" id="landSize" required min="0.1" step="0.1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="seedType">Seed Type:</label>
+                        <select id="seedType" required>
+                            <option value="early">Early Maturity</option>
+                            <option value="medium">Medium Maturity</option>
+                            <option value="late">Late Maturity</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="irrigationType">Irrigation Type:</label>
+                        <select id="irrigationType" required>
+                            <option value="rainfed">Rainfed</option>
+                            <option value="sprinkler">Sprinkler</option>
+                            <option value="drip">Drip</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="calculate-btn">
+                        <i class="fas fa-calculator"></i>
+                        Calculate
+                    </button>
+                </form>
+
+                <div id="budgetResults" class="budget-results">
+                    <h3>Estimated Requirements:</h3>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <span class="result-label">Seeds Required:</span>
+                            <span id="seedsRequired" class="result-value">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Compound D Fertilizer:</span>
+                            <span id="compoundD" class="result-value">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">AN Fertilizer:</span>
+                            <span id="anFertilizer" class="result-value">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Estimated Cost:</span>
+                            <span id="totalCost" class="result-value">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="images/logo.png" alt="Marondera University Logo" class="university-logo">
+            <p>&copy; 2024 Marondera University. All rights reserved.</p>
+        </div>
+    </footer>
+
+       <!-- Chat Feature -->
+       <button class="chat-button" id="chatButton">
+        <i class="fas fa-comments fa-lg"></i>
+    </button>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Chat Support</span>
+            <i class="fas fa-times" id="chatClose" style="cursor: pointer;"></i>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your message...">
+            <button class="chat-send-btn" id="chatSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/maize.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MURIMI MUKURU - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="images/murimi.png" alt="Murimi Mukuru Logo" class="nav-logo-img">
+            <span class="nav-logo-text">Murimi Mukuru</span>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+            <a href="#" class="nav-link profile-link">
+                <i class="fas fa-user-circle"></i>
+                Profile
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="hero-section animate__animated animate__fadeIn">
+            <h1>Welcome to Murimi Mukuru</h1>
+            <p>Your trusted companion in modern farming</p>
+        </section>
+
+        <section class="features-grid animate__animated animate__fadeInUp">
+            
+            <div class="feature-card" onclick="location.href='market.html'">
+                <div class="feature-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3>Farmers Market</h3>
+                <p>Buy and sell agricultural products directly with farmers</p>
+            </div>
+
+            <div class="feature-card" onclick="location.href='crops.html'">
+                <div class="feature-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3>Crops</h3>
+                <p>Expert guidance on crop cultivation and management</p>
+            </div>
+
+            <div class="feature-card" onclick="location.href='animals.html'">
+                <div class="feature-icon">
+                    <i class="fas fa-horse"></i>
+                </div>
+                <h3>Animals</h3>
+                <p>Livestock management and care instructions</p>
+            </div>
+
+            <div class="feature-card" onclick="location.href='soil_test.html'">
+                <div class="feature-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h3>Soil Test Interpretation</h3>
+                <p>Understand your soil analysis results</p>
+            </div>
+
+            <div class="feature-card" onclick="location.href='regions.html'">
+                <div class="feature-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h3>Farming Regions Expertise</h3>
+                <p>Region-specific farming recommendations</p>
+            </div>
+
+            <div class="feature-card" onclick="location.href='thermometer.html'">
+                <div class="feature-icon">
+                    <i class="fas fa-temperature-high"></i>
+                </div>
+                <h3>Smart Thermometer</h3>
+                <p>Real-time temperature monitoring for tobacco barns</p>
+            </div>
+
+           
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="images/logo.png" alt="Marondera University Logo" class="university-logo">
+            <p>&copy; 2024 Marondera University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chat Feature -->
+    <button class="chat-button" id="chatButton">
+        <i class="fas fa-comments fa-lg"></i>
+    </button>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Chat Support</span>
+            <i class="fas fa-times" id="chatClose" style="cursor: pointer;"></i>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type your message...">
+            <button class="chat-send-btn" id="chatSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

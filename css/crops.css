@@ -1,0 +1,204 @@
+/* Page Title */
+.page-title {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 15px 45px 15px 20px;
+    border: 2px solid #eee;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#searchInput:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.2);
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+/* Table Styling */
+.crops-table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.crops-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 600px;
+}
+
+.crops-table th {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-weight: 600;
+    padding: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.crops-table th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.crops-table th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.crops-table td {
+    padding: 1.2rem;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.table-row {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.table-row:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+}
+
+/* Crop Images */
+.crop-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.crop-image:hover {
+    transform: scale(1.15) rotate(2deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.view-details-btn {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.view-details-btn i {
+    font-size: 16px;
+}
+
+.view-details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .crops-section {
+        padding: 1rem;
+    }
+    
+    .crops-table th,
+    .crops-table td {
+        padding: 1rem;
+    }
+    
+    .crop-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .view-details-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Loading Animation */
+@keyframes shimmer {
+    0% {
+        background-position: -468px 0;
+    }
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+/* Hover Effects */
+.crops-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.crops-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(45deg);
+    pointer-events: none;
+    z-index: -1;
+}
+
